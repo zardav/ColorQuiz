@@ -4,7 +4,7 @@
     <title data-lang="perceptual_color_diff"><?php print $lang['perceptual_color_diff']; ?></title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta property="og:image" content="page-icon-<?php print $lang_key; ?>.png" />
+    <meta property="og:image" content="/page-icon-<?php print $lang_key; ?>.png" />
     <meta property="og:description"
           content="<?php print $lang['og_description'] ?>"/>
 
