@@ -1,0 +1,19 @@
+RewriteEngine On
+
+RewriteRule ^(.*)\.css$ style/style.php?p=$1.scss [L,NC]
+RewriteRule ^v2/?$ v2.php [L,NC]
+RewriteRule ^v2/(.*)$ /$1 [NC]
+
+
+
+RewriteCond %{HTTP_HOST} ^v2.cstudy.me
+RewriteRule ^$ v2.php [L,NC]
+
+RewriteCond %{HTTP_HOST} ^en.cstudy.me
+RewriteRule ^(.*)$ $1?lang=en [L,NC,QSA]
+
+
+RewriteCond %{HTTP_HOST} !^cstudy.me$ [NC]
+RewriteCond %{HTTP_HOST} !^en.study.me [NC]
+RewriteCond %{HTTP_HOST} !^www.study.me [NC]
+RewriteRule ^(.*)$ - [L,R=404]
