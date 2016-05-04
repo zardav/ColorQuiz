@@ -29,7 +29,10 @@ $Lang = array(
       'restart' => 'התחל מחדש',
       'menu' => 'תפריט',
       'question_back' => 'שאלה קודמת',
-      'question' => 'שאלה'
+      'question' => 'שאלה',
+      'og_description' => 'לפניכם שאלון על דמיון בין צבעים, נשמח אם תענו. השאלון פשוט, ידידותי וניתן להפסיק בכל רגע. מותאם גם לנייד.
+נשמח אם תשתפו ותפיצו הלאה.
+תודה!'
   ),
   'en' => array(
       'next_lang' => 'he',
@@ -59,7 +62,10 @@ Thanks!'),
       'restart' => 'Restart',
       'menu' => 'Menu',
       'question_back' => 'Previous question',
-      'question' => 'Question'
+      'question' => 'Question',
+      'og_description' => "This is a questionnaire on color difference. It's simple, friendly, and you can stop whenever you want. Compatible also with phone.
+We would appreciate if you answer as many questions as possible and share this!
+Thanks!"
   )
     
 );

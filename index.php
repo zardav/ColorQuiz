@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width" />
     <meta property="og:image" content="pageicon.png" />
     <meta property="og:description"
-          content="להלן שאלון על דמיון בין צבעים, נשמח אם תענו. השאלון פשוט, ידידותי וניתן להפסיק בכל רגע. מותאם גם לנייד.
-נשמח אם תשתפו ותפיצו הלאה.
-תודה!" />
+          content="<?php print $lang['og_description'] ?>"/>
 
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
