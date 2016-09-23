@@ -32,7 +32,9 @@ $Lang = array(
       'question' => 'שאלה',
       'og_description' => 'לפניכם שאלון על דמיון בין צבעים, נשמח אם תענו. השאלון פשוט, ידידותי וניתן להפסיק בכל רגע. מותאם גם לנייד.
 נשמח אם תשתפו ותפיצו הלאה.
-תודה!'
+תודה!',
+      'press_the_more_similar' => 'יש ללחוץ על הצבע שדומה יותר, ובמקרה שלא ניתן להחליט, ללחוץ על הצבע האמצעי.',
+      'which_more_similar' => 'איזה מהצבעים דומה יותר לצבע האמצעי?'
   ),
   'en' => array(
       'next_lang' => 'he',
@@ -65,7 +67,9 @@ Thanks!'),
       'question' => 'Question',
       'og_description' => "This is a questionnaire on color difference. It's simple, friendly, and you can stop whenever you want. Compatible also with phone.
 We would appreciate if you answer as many questions as possible and share this!
-Thanks!"
+Thanks!",
+      'press_the_more_similar' => 'Press the more similar color, or press the center color if you cannot decide.',
+      'which_more_similar' => 'Which of these colors is more similar to the center color?'
   )
     
 );

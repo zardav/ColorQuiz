@@ -88,7 +88,7 @@ body {
   height: 23vh;
 }
 
-.quiz1, .thanks {
+.quiz, .thanks {
   display: none;
 }
 
@@ -105,10 +105,13 @@ table {
   width: 100%;
   height: $color_height;
   position: relative;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+  background: no-repeat 50% 50%;
   background-size: 0% 100%;
   transition: background-size .3s;
+}
+
+.color:active {
+  background-color: #eeeeee !important;
 }
 
 .text {
@@ -130,6 +133,10 @@ table {
   font-size: 5vh;
   background-color: #c6fbff;
   border-bottom: black 1px solid;
+}
+
+.top .quiz2 {
+  font-size: 3.5vh !important;
 }
 
 

@@ -24,8 +24,9 @@
                 showQuestion(questions[0]);
             });
 
-            $('.button_yes').click({answer:1}, answerClick);
-            $('.button_no').click({answer:0}, answerClick);
+            $('#c1').click({answer:1}, answerClick);
+            $('#c2').click({answer:2}, answerClick);
+            $('#c3').click({answer:3}, answerClick);
             $('#lang').click(function() {
 
                 lang_key = getText('next_lang');
@@ -92,7 +93,6 @@
         function answerClick(event) {
             if(!handleClick) return;
             handleClick = false;
-            var className = event.target.className;
             answer(questions[questionIndex], event.data.answer);
             if(questionIndex+1 < wantToAnswer) {
                 next_question();
@@ -136,21 +136,22 @@
             return showQuestion(questions[questionIndex]);
         }
 
-        function answer(q, is_similar){
-            var req_page = isUpdate ? 'update_answer.php' : 'answer.php';
-            $.get(req_page, {'color_a': q[0], 'color_b': q[1], 'answer': is_similar});
+        function answer(q, ans){
+            var req_page = isUpdate ? 'q2_update_answer.php' : 'q2_answer.php';
+            $.get(req_page, {'qid': q[0], 'answer': ans});
         }
 
         function loadQuestions() {
             var amount = 30;
-            return $.getJSON("load.php", { 'amount': amount }, function(result){
+            return $.getJSON("q2_load.php", { 'amount': amount }, function(result){
                 $.merge(questions, result);
             });
         }
 
         function showQuestion(q) {
-            var defer = $.when(changeColor($('#c1'), q[0]),
-                changeColor($('#c2'), q[1]));
+            var defer = $.when(changeColor($('#c1'), q[1]),
+                changeColor($('#c2'), q[2]),
+                changeColor($('#c3'), q[3]));
             defer.then(function(){
                 handleClick = true;});
             return defer;
@@ -165,7 +166,7 @@
                 'transition': 'background-size .3s'});
             setTimeout(function(){
                 _element.css({'background-color': color,
-                    'background-size': '0% 100%'});
+                    'background-size': '100% 0%'});
                 setTimeout(function(){defer.resolve();}, 150);
             }, 300);
             return defer.promise();
@@ -179,7 +180,7 @@
     <tr><td class="menu_button" id="lang"><?php print $Lang[$lang['next_lang']]['lang_name']; ?></td></tr>
 </table>
 <table class="quiz tb1">
-    <tr><td class="top" style="width: 82%; position: relative">
+    <tr><td class="top" style="width: 82%; position: relative; font-size: 3.6vh;">
             <div style="
     position: absolute;
     top: 0;
@@ -194,12 +195,12 @@
     left: 50%;
     transform: translateX(-50%);
     padding-right: 3vh;
-    font-size: 2vh;
-    padding-bottom: 0.5vh;
+    font-size: 1.85vh;
+    padding-bottom: 1.4vh;
     width: 100%;
     line-height: 110%;
-" data-lang="please_answer_only_when"><?php print $lang['please_answer_only_when']; ?></div>
-            <div style="padding-right: 6.25vh; padding-bottom: 3vh; line-height: 105%;" data-lang="is_there_any_similarity"><?php print $lang['is_there_any_similarity']; ?></div>
+" data-lang="press_the_more_similar"><?php print $lang['press_the_more_similar']; ?></div>
+            <div style="padding-right: 6.25vh; padding-bottom: 3vh; line-height: 105%;" data-lang="which_more_similar"><?php print $lang['which_more_similar']; ?></div>
         </td>
         <td class="top">
             <div class="top-left">
@@ -221,14 +222,12 @@
                     <span data-lang="question"><?php print $lang['question']; ?></span><span> </span><span style="font-size: 1.8vh;"><span id="q_number">1</span>/<span id="q_amount">50</span></span>
                 </div>
         </td></tr>
-    <tr id="c1" class="color"><td colspan="2"></td></tr>
-    <tr id="c2" class="color"><td colspan="2">
-        </td></tr>
 </table>
-<table class="quiz tb2">
-    <tr class="buttons">
-        <td class="button_yes" data-lang="similar"><?php print $lang['similar']; ?></td>
-        <td class="button_no" data-lang="unsimilar"><?php print $lang['unsimilar']; ?></td>
+<table class="quiz tb1">
+    <tr style="height: 82.1vh">
+        <td class="color" id="c1" style="width: 33%;"></td>
+        <td class="color" id="c2" style="width: 34%;"></td>
+        <td class="color" id="c3" style="width: 33%;"></td>
     </tr>
 </table>
 <table class="thanks">
