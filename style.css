@@ -1,0 +1,202 @@
+.unselectable, .button_no, .button_yes, .menu_button, .thanks_button {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+  }
+  
+  .buttons_yes_no, .button_no, .button_yes {
+    width: 50%;
+    height: 16.33vh;
+  }
+  
+  html:lang(he) {
+    font-family: arial;
+  }
+  
+  html:lang(en) {
+    font-family: serif;
+  }
+  
+  body {
+    background-color: #d8d8d8;
+    width: 768px;
+    margin: auto;
+    border: black 1px solid;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    body {
+      width: 100%;
+      margin: 0;
+      border: 0;
+    }
+  }
+  .menu_button, .thanks_button {
+    height: 28.5vh;
+    font-size: 6vh;
+    text-align: center;
+    cursor: default;
+    background-color: #F1DDA5;
+    border: burlywood 3px groove;
+    border-radius: 1.1vh;
+  }
+  .menu_button:hover, .thanks_button:hover {
+    background-color: #fbf6e7;
+  }
+  .menu_button:active, .thanks_button:active {
+    background-color: white;
+  }
+  
+  .thanks_button {
+    height: 23vh;
+  }
+  
+  .quiz, .thanks {
+    display: none;
+  }
+  
+  table {
+    width: 100%;
+    border-spacing: 0;
+  }
+  
+  .menu, .thanks {
+    height: 100%;
+  }
+  
+  .tb2 {
+    border-spacing: 0.3vh;
+    background-color: #c6fbff;
+  }
+  
+  .color {
+    width: 100%;
+    height: 32.9vh;
+    position: relative;
+    background: no-repeat 50% 50%;
+    background-size: 0% 100%;
+    transition: background-size 0.3s;
+  }
+  
+  .color:active {
+    background-color: #eeeeee !important;
+  }
+  
+  .text {
+    text-align: start;
+    padding: 3vh 1.6vh;
+    background-color: #eeeeee;
+    border-bottom: black 1px solid;
+  }
+  
+  :lang(he) .text {
+    font-size: 2vh !important;
+  }
+  
+  :lang(en) .text {
+    font-size: 1.8vh !important;
+  }
+  
+  #c2 td {
+    border-bottom: black 1px solid;
+  }
+  
+  .top {
+    text-align: center;
+    height: 16.8vh;
+    font-size: 5vh;
+    background-color: #c6fbff;
+    border-bottom: black 1px solid;
+  }
+  
+  .top .quiz2 {
+    font-size: 3.5vh !important;
+  }
+  
+  html[dir=ltr] .tb1 {
+    direction: rtl;
+  }
+  
+  html[dir=ltr] .tb1 tr td {
+    direction: ltr;
+  }
+  
+  .top-left {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .button_yes {
+    font-size: 5vh;
+    text-align: center;
+    cursor: default;
+    background-color: #00b600;
+    border: burlywood 3px groove;
+    border-radius: 1.1vh;
+  }
+  .button_yes:hover {
+    background-color: #04ff04;
+  }
+  .button_yes:active {
+    background-color: #50ff50;
+  }
+  
+  .button_no {
+    font-size: 5vh;
+    text-align: center;
+    cursor: default;
+    background-color: #f94c43;
+    border: burlywood 3px groove;
+    border-radius: 1.1vh;
+  }
+  .button_no:hover {
+    background-color: #fb938d;
+  }
+  .button_no:active {
+    background-color: #fed9d7;
+  }
+  
+  :lang(he) .top, :lang(he) .buttons td {
+    font-size: 5vh;
+  }
+  
+  :lang(en) .top, :lang(en) .buttons td {
+    font-size: 3.7vh;
+  }
+  
+  img {
+    max-height: 100%;
+    max-width: 100%;
+  }
+  
+  .img_disabled {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
+    /* Firefox 10+, Firefox on Android */
+    opacity: 0.5;
+  }
+  
+  .img_button:not(.img_disabled):hover {
+    -webkit-filter: hue-rotate(31deg);
+    -moz-filter: hue-rotate(31deg);
+    -o-filter: hue-rotate(31deg);
+    -ms-filter: hue-rotate(31deg);
+    filter: hue-rotate(31deg);
+  }
+  
+  .img_button:not(.img_disabled):active {
+    -webkit-filter: hue-rotate(31deg);
+    -moz-filter: hue-rotate(31deg);
+    -o-filter: hue-rotate(31deg);
+    -ms-filter: hue-rotate(31deg);
+    filter: hue-rotate(31deg);
+    opacity: 0.7;
+  }
