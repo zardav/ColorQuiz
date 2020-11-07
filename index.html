@@ -66,7 +66,8 @@
         }
 
         function getText(key_) {
-            return lang[lang_key][key_];
+            const str = lang[lang_key][key_];
+            return str.replace(/(?:\r\n|\r|\n)/g, '<br>');
         }
 
         function continueClick() {
@@ -210,7 +211,7 @@
 <body>
     <table class="menu">
         <tr>
-            <td class="text" data-lang=" about">This is a questionnaire on perceptual color difference.<br>
+            <td class="text" data-lang="about">This is a questionnaire on perceptual color difference.<br>
                 The purpose of these questions is to gather a dataset of color pairs and their corresponding
                 similarity.<br>
                 This dataset will be used to test different color differences and compare them against perceptual color
@@ -226,7 +227,7 @@
             </td>
         </tr>
         <tr>
-            <td class="menu_button" id="start1" data-lang="startquiz">Start</td>
+            <td class="menu_button" id="start1" data-lang="startquiz1">Start</td>
         </tr>
         <tr>
             <td class="menu_button" id="lang">עברית</td>
