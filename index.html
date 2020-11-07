@@ -168,7 +168,7 @@
         function postAnswer(q, is_similar) {
             const urlAddress = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLScbakfMV8RPI-LpBDlDtuIeEoKDHIiiNXODOMjsDlvwe1woHA/formResponse';
             const isSimStr = is_similar ? "TRUE" : "FALSE";
-            $.get(urlAddress, { 'entry.192852037': q[0], 'entry.1285917805': q[1], 'entry.134297632': isSimStr });
+            $.post(urlAddress, { 'entry.192852037': q[0], 'entry.1285917805': q[1], 'entry.134297632': isSimStr });
         }
 
         function loadQuestions() {
