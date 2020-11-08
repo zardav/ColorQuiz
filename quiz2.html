@@ -219,13 +219,22 @@
 <body>
     <table class="menu">
         <tr>
-            <td class="text" " data-lang=" about"><?php print $lang['about']; ?></td>
+            <td class="text" " data-lang=" about">This is a questionnaire on perceptual color difference.<br>
+                The purpose of these questions is to gather a dataset of color pairs and their corresponding similarity.<br>
+                This dataset will be used to test different color differences and compare them against perceptual color differences.<br>
+                We would appreciate very much if you answer as many questions as possible (even answering several questions would be helpful).<br>
+                Please answer "dissimilar" only if the colors are totally different.<br>
+                <br>
+                Thanks in advance,<br>
+                <br>
+                <div style="float: right";>David Zar, Student<br>
+                Dr. Ofir Pele, Supervisor</div></td>
         </tr>
         <tr>
-            <td class="menu_button" id="start1" data-lang="startquiz"><?php print $lang['startquiz']; ?></td>
+            <td class="menu_button" id="start1" data-lang="startquiz1">Start</td>
         </tr>
         <tr>
-            <td class="menu_button" id="lang"><?php print $Lang[$lang['next_lang']]['lang_name']; ?></td>
+            <td class="menu_button" id="lang">עברית</td>
         </tr>
     </table>
     <table class="quiz tb1">
@@ -249,9 +258,9 @@
     padding-bottom: 1.4vh;
     width: 100%;
     line-height: 110%;
-" data-lang="press_the_more_similar"><?php print $lang['press_the_more_similar']; ?></div>
+" data-lang="press_the_more_similar">Press the more similar color, or press the center color if you cannot decide.</div>
                 <div style="padding-right: 6.25vh; padding-bottom: 3vh; line-height: 105%;"
-                    data-lang="which_more_similar"><?php print $lang['which_more_similar']; ?></div>
+                    data-lang="which_more_similar">Which of these colors is more similar to the center color?</div>
             </td>
             <td class="top">
                 <div class="top-left">
@@ -270,7 +279,7 @@
                         left: 0;
                         padding: 0.6vh;
                         ">
-                        <span data-lang="question"><?php print $lang['question']; ?></span><span> </span><span
+                        <span data-lang="question">Question</span><span> </span><span
                             style="font-size: 1.8vh;"><span id="q_number">1</span>/<span id="q_amount">50</span></span>
                     </div>
             </td>
@@ -285,16 +294,19 @@
     </table>
     <table class="thanks">
         <tr>
-            <td class="text" data-lang="thanks!"><?php print $lang['thanks!']; ?></td>
+            <td class="text" data-lang="thanks!">Thank you for your answers.<br>
+                Now you can close the window, return to the menu or continue answering (which would be much appreciated!)<br>
+                You can close the window at any time, your answers will be automatically saved.<br>
+                Thanks!</td>
         </tr>
         <tr>
-            <td class="thanks_button" id="restart_button" data-lang="restart"><?php print $lang['restart']; ?></td>
+            <td class="thanks_button" id="restart_button" data-lang="restart">Restart</td>
         </tr>
         <tr>
-            <td class="thanks_button" id="continue_button" data-lang="continue"><?php print $lang['continue']; ?></td>
+            <td class="thanks_button" id="continue_button" data-lang="continue">Continue</td>
         </tr>
         <tr>
-            <td class="thanks_button" id="menu_button" data-lang="menu"><?php print $lang['menu']; ?></td>
+            <td class="thanks_button" id="menu_button" data-lang="menu">Menu</td>
         </tr>
     </table>
 </body>
