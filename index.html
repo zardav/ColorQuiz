@@ -10,7 +10,7 @@
           Thanks!" />
 
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="language.js"></script>
     <script src="create.js"></script>
     <script>
@@ -234,67 +234,35 @@
             <td class="menu_button" id="lang">עברית</td>
         </tr>
     </table>
-    <table class="quiz tb1">
-        <tr>
-            <td class="top" style="width: 82%; position: relative">
+    <div class="quiz">
+        <div style="display:flex; flex-flow: column; height: 100%;">
+            <div class="top" style="display:flex; align-items: center; justify-content: space-between;">
+                <img id="end_button" class="img_button" src="Delete.png" style="height:5vh; padding: 1.3vh;" />
                 <div style="
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 5vh;
-    height: 5vh;
-    margin: 1.93vh 1.25vh;
-"><img id="end_button" class="img_button" src="Delete.png"></div>
-                <div style="
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    padding-right: 3vh;
-    font-size: 2vh;
-    padding-bottom: 0.5vh;
-    width: 100%;
-    line-height: 110%;
-" data-lang="please_answer_only_when">Please answer "dissimilar" only if the colors are totally different.</div>
-                <div style="padding-right: 6.25vh; padding-bottom: 3vh; line-height: 105%;"
-                    data-lang="is_there_any_similarity">Is there similarity between these colors?</div>
-            </td>
-            <td class="top">
-                <div class="top-left">
-                    <img id="back_button" class="img_button img_disabled" src="Undo.png" style="
-                            max-height: 100%;
-                            max-width: 100%;
-                            position: absolute;
-                            left: 0.5vh;
-                            top: 50%;
-                            transform: translateY(-70%);
-                        ">
-                    <div style="
                         font-size: 2vh;
-                        position: absolute;
-                        bottom: 0;
-                        left: 0;
-                        padding: 0.6vh;
                         ">
-                        <span data-lang="question">Question</span><span> </span><span style="font-size: 1.8vh;"><span
-                                id="q_number">1</span>/<span id="q_amount">50</span></span>
-                    </div>
-            </td>
-        </tr>
-        <tr id="c1" class="color">
-            <td colspan="2"></td>
-        </tr>
-        <tr id="c2" class="color">
-            <td colspan="2">
-            </td>
-        </tr>
-    </table>
-    <table class="quiz tb2">
-        <tr class="buttons">
-            <td class="button_yes" data-lang="similar">Similar</td>
-            <td class="button_no" data-lang="unsimilar">Dissimilar</td>
-        </tr>
-    </table>
+                    <span data-lang="question">Question</span><span> </span><span style="font-size: 1.8vh;"><span
+                            id="q_number">1</span>/<span id="q_amount">50</span></span>
+                </div>
+                <img id="back_button" class="img_button img_disabled" src="Undo.png"
+                    style="height: 5vh; padding: 1.3vh;" />
+            </div>
+            <div class="top" style="padding: 1.3vh; border-bottom: 0" data-lang="is_there_any_similarity">Is there similarity between
+                these colors?</div>
+            <div class="top" style="padding: 1.3vh;
+    font-size: 2vh;
+" data-lang="please_answer_only_when">Please answer "dissimilar" only if the colors are totally different.</div>
+
+            <div id="c1" class="color" style="flex: 1">
+            </div>
+            <div id="c2" class="color" style="flex: 1">
+            </div>
+            <div class="quiz buttons" style="display: flex">
+                <div class="button button_yes" data-lang="similar">Similar</div>
+                <div class="button button_no" data-lang="unsimilar">Dissimilar</div>
+            </div>
+        </div>
+    </div>
     <table class="thanks">
         <tr>
             <td class="text" data-lang="thanks!">Thank you for your answers.<br>

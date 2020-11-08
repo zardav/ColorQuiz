@@ -8,8 +8,14 @@
   }
   
   .buttons_yes_no, .button_no, .button_yes {
-    width: 50%;
     height: 16.33vh;
+    flex: 1;
+  }
+
+  .button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
   }
   
   html:lang(he) {
@@ -100,7 +106,7 @@
     font-size: 1.8vh !important;
   }
   
-  #c2 td {
+  #c2 {
     border-bottom: black 1px solid;
   }
   
@@ -108,7 +114,7 @@
     text-align: center;
     font-size: 5vh;
     background-color: #c6fbff;
-    border-bottom: black 1px solid;
+    border-bottom: black 2px solid;
   }
   
   .top .quiz2 {
