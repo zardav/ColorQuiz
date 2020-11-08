@@ -32,6 +32,7 @@
       width: 100%;
       margin: 0;
       border: 0;
+      height: 100.1vh;
     }
   }
   .menu_button, .thanks_button {
@@ -73,8 +74,7 @@
   }
   
   .color {
-    width: 100%;
-    height: 32.9vh;
+    width: 100%;    
     position: relative;
     background: no-repeat 50% 50%;
     background-size: 0% 100%;
@@ -106,7 +106,6 @@
   
   .top {
     text-align: center;
-    height: 16.8vh;
     font-size: 5vh;
     background-color: #c6fbff;
     border-bottom: black 1px solid;
@@ -169,8 +168,7 @@
   }
   
   img {
-    max-height: 100%;
-    max-width: 100%;
+      
   }
   
   .img_disabled {

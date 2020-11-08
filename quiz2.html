@@ -10,7 +10,7 @@
           Thanks!" />
 
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="language.js"></script>
     <script src="q2gen.js"></script>
     <script>
@@ -220,15 +220,19 @@
     <table class="menu">
         <tr>
             <td class="text" data-lang="about">This is a questionnaire on perceptual color difference.<br>
-                The purpose of these questions is to gather a dataset of color pairs and their corresponding similarity.<br>
-                This dataset will be used to test different color differences and compare them against perceptual color differences.<br>
-                We would appreciate very much if you answer as many questions as possible (even answering several questions would be helpful).<br>
+                The purpose of these questions is to gather a dataset of color pairs and their corresponding
+                similarity.<br>
+                This dataset will be used to test different color differences and compare them against perceptual color
+                differences.<br>
+                We would appreciate very much if you answer as many questions as possible (even answering several
+                questions would be helpful).<br>
                 Please answer "dissimilar" only if the colors are totally different.<br>
                 <br>
                 Thanks in advance,<br>
                 <br>
-                <div style="float: right";>David Zar, Student<br>
-                Dr. Ofir Pele, Supervisor</div></td>
+                <div style="float: right" ;>David Zar, Student<br>
+                    Dr. Ofir Pele, Supervisor</div>
+            </td>
         </tr>
         <tr>
             <td class="menu_button" id="start1" data-lang="startquiz1">Start</td>
@@ -237,65 +241,47 @@
             <td class="menu_button" id="lang">עברית</td>
         </tr>
     </table>
-    <table class="quiz tb1">
-        <tr>
-            <td class="top" style="width: 82%; position: relative; font-size: 3.6vh;">
+    <div class="quiz tb1" style="display: flex; flex-flow:column; height: 100vh">
+        <div class="top" style="font-size: 3.6vh; height:auto; border-bottom: 0;">
+            <div style="
+    display: flex; justify-content: space-around;
+"><img id="end_button" class="img_button" src="Delete.png" style="height: 5vh; padding: 1.3vh" />
                 <div style="
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 5vh;
-    height: 5vh;
-    margin: 1.93vh 1.25vh;
-"><img id="end_button" class="img_button" src="Delete.png"></div>
-                <div style="
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    padding-right: 3vh;
-    font-size: 1.85vh;
-    padding-bottom: 1.4vh;
-    width: 100%;
-    line-height: 110%;
-" data-lang="press_the_more_similar">Press the more similar color, or press the center color if you cannot decide.</div>
-                <div style="padding-right: 6.25vh; padding-bottom: 3vh; line-height: 105%;"
-                    data-lang="which_more_similar">Which of these colors is more similar to the center color?</div>
-            </td>
-            <td class="top">
-                <div class="top-left">
-                    <img id="back_button" class="img_button img_disabled" src="Undo.png" style="
-                            max-height: 100%;
-                            max-width: 100%;
-                            position: absolute;
-                            left: 0.5vh;
-                            top: 50%;
-                            transform: translateY(-70%);
-                        ">
-                    <div style="
                         font-size: 2vh;
-                        position: absolute;
-                        bottom: 0;
-                        left: 0;
                         padding: 0.6vh;
                         ">
-                        <span data-lang="question">Question</span><span> </span><span
-                            style="font-size: 1.8vh;"><span id="q_number">1</span>/<span id="q_amount">50</span></span>
-                    </div>
-            </td>
-        </tr>
-    </table>
-    <table class="quiz tb1">
-        <tr style="height: 82.1vh">
-            <td class="color" id="c1" style="width: 33%;"></td>
-            <td class="color" id="c2" style="width: 34%;"></td>
-            <td class="color" id="c3" style="width: 33%;"></td>
-        </tr>
-    </table>
+                    <span data-lang="question">Question</span><span> </span><span style="font-size: 1.8vh;"><span
+                            id="q_number">1</span>/<span id="q_amount">50</span></span>
+                </div>
+
+
+                <img id="back_button" class="img_button img_disabled" src="Undo.png"
+                    style="height: 5vh; padding: 1.3vh" />
+            </div>
+        </div>
+        <div class="top" style="height:auto;">
+            <div class="top-left" style="display: flex; flex-flow: column">
+
+                <div style="padding: 1.3vh" data-lang="which_more_similar">Which of these colors is more similar to the
+                    center color?</div>
+                <div style="
+    font-size: 1.85vh;
+    padding: 1.3vh;
+" data-lang="press_the_more_similar">Press the more similar color, or press the center color if you cannot decide.
+                </div>
+            </div>
+        </div>
+        <div class="quiz tb1" style="display: flex; flex: 1">
+            <div class="color" id="c1" style="width: 33%;"></div>
+            <div class="color" id="c2" style="width: 34%;"></div>
+            <div class="color" id="c3" style="width: 33%;"></div>
+        </div>
+    </div>
     <table class="thanks">
         <tr>
             <td class="text" data-lang="thanks!">Thank you for your answers.<br>
-                Now you can close the window, return to the menu or continue answering (which would be much appreciated!)<br>
+                Now you can close the window, return to the menu or continue answering (which would be much
+                appreciated!)<br>
                 You can close the window at any time, your answers will be automatically saved.<br>
                 Thanks!</td>
         </tr>

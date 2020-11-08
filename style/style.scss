@@ -103,7 +103,7 @@ table {
 }
 .color {
   width: 100%;
-  height: $color_height;
+  // height: $color_height;
   position: relative;
   background: no-repeat 50% 50%;
   background-size: 0% 100%;
@@ -129,7 +129,7 @@ table {
 
 .top {
   text-align: center;
-  height: $title_height;
+  // height: $title_height;
   font-size: 5vh;
   background-color: #c6fbff;
   border-bottom: black 1px solid;
@@ -167,8 +167,7 @@ html[dir='ltr'] .tb1 tr td {
 :lang(en) .top, :lang(en) .buttons td {font-size: 3.7vh}
 
 img {
-  max-height: 100%;
-  max-width: 100%;
+  
 }
 
 .img_disabled {
