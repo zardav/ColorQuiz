@@ -27,7 +27,11 @@ function nearColor(c, maxDist) {
 }
 
 function colorToString(color) {
-  return color.map(l=>l.toString(16)).join('');
+    const hex2pad = l => {
+        s = l.toString(16);
+        return s.length < 2 ? '0'+s : s;
+    };
+  return color.map(hex2pad).join('');
 }
 
 function genQ2(maxDist) {
