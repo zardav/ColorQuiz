@@ -170,7 +170,8 @@
         function postAnswer(q, is_similar) {
             const urlAddress = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLScbakfMV8RPI-LpBDlDtuIeEoKDHIiiNXODOMjsDlvwe1woHA/formResponse';
             const isSimStr = is_similar ? "TRUE" : "FALSE";
-            $.post(urlAddress, { 'entry.192852037': q[0], 'entry.1285917805': q[1], 'entry.134297632': isSimStr });
+            const data = { 'entry.192852037': q[0], 'entry.1285917805': q[1], 'entry.134297632': isSimStr };
+            $.post(urlAddress, data);
         }
 
         function loadQuestions() {
@@ -247,7 +248,8 @@
                 <img id="back_button" class="img_button img_disabled" src="Undo.png"
                     style="height: 5vh; padding: 1.3vh;" />
             </div>
-            <div class="top" style="padding: 1.3vh; border-bottom: 0" data-lang="is_there_any_similarity">Is there similarity between
+            <div class="top" style="padding: 1.3vh; border-bottom: 0" data-lang="is_there_any_similarity">Is there
+                similarity between
                 these colors?</div>
             <div class="top" style="padding: 1.3vh;
     font-size: 2vh;
