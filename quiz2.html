@@ -10,7 +10,7 @@
           Thanks!" />
 
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="language.js"></script>
     <script src="q2gen.js"></script>
     <script>
@@ -55,7 +55,7 @@
                 });
             });
             $('#end_button').click(endClick);
-            setTimeout( () => window.scrollTo(0, 1), 10);
+            setTimeout( () => window.scrollTo(0, document.body.scrollHeight), 10);
         });
 
         function endClick() {
