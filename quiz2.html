@@ -187,8 +187,8 @@
 
         function showQuestion(q) {
             var defer = $.when(changeColor($('#c1'), q[1]),
-                changeColor($('#c2'), q[2]),
-                changeColor($('#c3'), q[3]));
+                changeColor($('#c2'), q[0]),
+                changeColor($('#c3'), q[2]));
             defer.then(function () {
                 handleClick = true;
             });
