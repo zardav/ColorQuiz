@@ -159,12 +159,12 @@
                 pendingAnswer.trigger();
             }
             const delay = 3000;
-            const ans = () => {
+            const doAns = () => {
                 postAnswer(q, ans);
                 pendingAnswer = false;
                 disableBack();
             };
-            pendingAnswer = createTimeout(ans, delay);
+            pendingAnswer = createTimeout(doAns, delay);
             enableBack();
         }
 
