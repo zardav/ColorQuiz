@@ -25,6 +25,7 @@
     width: 768px;
     margin: auto;
     border: black 1px solid;
+    height: 100.1vh;
   }
   
   @media only screen and (max-width: 768px) {
@@ -32,7 +33,6 @@
       width: 100%;
       margin: 0;
       border: 0;
-      height: 100.1vh;
     }
   }
   .menu_button, .thanks_button {
@@ -121,12 +121,6 @@
   
   html[dir=ltr] .tb1 tr td {
     direction: ltr;
-  }
-  
-  .top-left {
-    position: relative;
-    height: 100%;
-    width: 100%;
   }
   
   .button_yes {
